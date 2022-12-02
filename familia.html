@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="/css/buttons.css" />
+    <title>Grupo de desarrollo Web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+      />
+
+       <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <section id="inicio">
+        <div class="contenido">
+          <header>
+            <div class="contenido-header">
+              <h1><a href="index.html" onclick="seleccionar(this)">/JP/</a></h1>
+              <nav id="nav" class="">
+                <ul id="links">
+                    <li>
+                        <a
+                          href="presentacion.html"
+                          onclick="seleccionar(this)"
+                          >PRESENTACION</a
+                        >
+                      </li>
+                      <li>
+                        <a href="familia.html" class="seleccionado" onclick="seleccionar(this)">FAMILIA</a>
+                      </li>
+                      <li>
+                        <a href="amigos.html" onclick="seleccionar(this)">AMIGOS</a>
+                      </li>
+                      <li>
+                        <a href="estudios.html" onclick="seleccionar(this)">ESTUDIOS</a>
+                      </li>
+                      <li>
+                        <a href="contacto.html" onclick="seleccionar(this)">CONTACTO</a>
+                      </li>
+                </ul>
+              </nav>
+              <!-- Icono del menu responsive -->
+              <div id="icono-nav" onclick="responsiveMenu()">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+  
+              <div class="redes">
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+              </div>
+            </div>
+          </header>
+            </div>
+     <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio">
+        <h3 class="titulo-seccion" style="color: white;">Mi Familia</h3>
+        <div class="fila">
+          <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="img/wife.jpg" alt="" />
+            <div class="info">
+              <h4>Laura Cabanillas</h4>
+              <p>Esposa</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="img/son.jpg" alt="" />
+            <div class="info">
+              <h4>Adrian Pacheco</h4>
+              <p>Hijo</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="img/parents.jpg" alt="" />
+            <div class="info">
+              <h4>Gisella y Facundo</h4>
+              <p>Padres</p>
+            </div>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="img/brother.jpg" alt="" />
+            <div class="info">
+              <h4>Lucas Pacheco</h4>
+              <p>Hermano</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="img/nephews.jpg" alt="" />
+            <div class="info">
+              <h4>Frida, Sebastian y Alejandro</h4>
+              <p>Sobrinos</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="img/family.jpg" alt="" />
+            <div class="info">
+              <h4>Foto familiar</h4>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="img/sister.jpg" alt="" />
+            <div class="info">
+              <h4>Camila Pacheco</h4>
+              <p>Hermana</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="img/cousing.jpg" alt="" />
+            <div class="info">
+              <h4>Irene y Julio</h4>
+              <p>Primos</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="img/pet.jpg" alt="" />
+            <div class="info">
+              <h4>Leo</h4>
+              <p>Mascota</p>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!-- SECCION FOOTER -->
+    <footer>
+        <p>Todos los derechos reservados - 2022</p>
+        <div class="redes">
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+        </div>
+      </footer>
+  
+      <script src="/js/script.js"></script>
+</body>
+</html>
