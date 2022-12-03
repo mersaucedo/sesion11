@@ -14,6 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap"
       rel="stylesheet"
       />
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
       <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -32,22 +34,15 @@
 
                 <nav id="nav" class="">
                     <ul id="links">
-                        <li>
-                            <a href="presentacion.html" onclick="seleccionar(this)">PRESENTACION</a>
+                          <li>
+                            <a href="data.html" onclick="seleccionar(this)">DATA EMPLEADO</a>
                           </li>
                           <li>
-                            <a href="familia.html" onclick="seleccionar(this)">FAMILIA</a>
+                            <a href="table.html"class="seleccionado" onclick="seleccionar(this)">LISTA DE EMPLEADOS</a>
                           </li>
                           <li>
-                            <a href="amigos.html" onclick="seleccionar(this)"
-                            >AMIGOS</a>
-                          </li>
-                          <li>
-                            <a href="estudios.html"class="seleccionado" onclick="seleccionar(this)">ESTUDIOS</a>
-                          </li>
-                          <li>
-                            <a href="contacto.html" onclick="seleccionar(this)"
-                              >CONTACTO</a
+                            <a href="form.html" onclick="seleccionar(this)"
+                              >FORMULARIO DE REGISTRO</a
                             >
                           </li>
                     </ul>
@@ -67,8 +62,15 @@
             </div>
         </header>
           <!-- SECCION S E R V I C I O S -->
-    <section id="servicios">
-        <h3 class="titulo-seccion">MIS ESTUDIOS</h3>
+
+        <!-- <section id="tabla">
+            <h3 class="titulo-seccion"> TABLA DE EMPLEADOS</h3>
+            
+        </section> -->
+
+
+    <!-- <section id="root">
+       <h3 class="titulo-seccion">Lista de Empleados</h3>
             <div class="fila">
                 <div class="servicio">
                     <span class="icono"> <i class="fa-solid fa-code"></i></span>
@@ -200,9 +202,9 @@
                         I have been providing web design services with great success for 9
                         years. The client is very happy
                         </p>
-                    </div>
+                    </div> 
                 </div>
-    </section>
+    </section> -->
     <!-- SECCION FOOTER -->
     <footer>
         <p>Todos los derechos reservados - 2022</p>
@@ -212,7 +214,21 @@
           <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
         </div>
       </footer>
-  
+      <script src="js/parte1.js"></script>
       <script src="/js/script.js"></script>
 </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="js/parte1.js"></script>
+  </body>
+</html> -->

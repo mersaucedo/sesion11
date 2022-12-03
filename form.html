@@ -32,21 +32,15 @@
               <h1><a href="index.html" onclick="seleccionar(this)">/JP/</a></h1>
               <nav id="nav" class="">
                 <ul id="links">
-                    <li>
-                        <a href="presentacion.html" onclick="seleccionar(this)">PRESENTACION</a>
+                      <li>
+                        <a href="data.html" onclick="seleccionar(this)">DATA EMPLEADO</a>
                       </li>
                       <li>
-                        <a href="familia.html" onclick="seleccionar(this)">FAMILIA</a>
+                        <a href="table.html" onclick="seleccionar(this)">LISTA DE EMPLEADOS</a>
                       </li>
                       <li>
-                        <a href="amigos.html" onclick="seleccionar(this)">AMIGOS</a>
-                      </li>
-                      <li>
-                        <a href="estudios.html" onclick="seleccionar(this)">ESTUDIOS</a>
-                      </li>
-                      <li>
-                        <a href="contacto.html" class="seleccionado" onclick="seleccionar(this)"
-                          >CONTACTO</a
+                        <a href="form.html" class="seleccionado" onclick="seleccionar(this)"
+                          >FORMULARIO DE REGISTRO</a
                         >
                       </li>
                 </ul>
@@ -70,7 +64,7 @@
              
 
                 <section id="contacto">
-                  <h3 class="titulo-seccion">Contacto</h3>
+                  <h3 class="titulo-seccion">FORMULARIO DE REGISTRO</h3>
                   <div class="contenedor-form">
                   
             
@@ -110,42 +104,28 @@
             
                   <!-- Grupo: Teléfono -->
                   <div class="formulario__grupo" id="grupo__telefono">
-                    <label for="telefono" class="formulario__label">Teléfono</label>
-                    <div class="formulario__grupo-input">
-                      <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="934757520">
+                    <label for="telefono" class="formulario__label">Cargo</label>
+                    <div class="formulario__input">
+                      <select name="cargo" id="telefono">
+                        <option >selelcione</option>
+                        <option value="Jefe">Jefe</option>
+                        <option value="Analista">Analista</option>
+                        <option value="Programador">Programador</option>
+                        <option value="Soporte">Soporte</option>
+                        <option value="Asistente">Asistente</option>
+                      </select>
                       <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 9 dígitos.</p>
+                    <p class="formulario__input-error">Cargo no disponible</p>
                   </div>
             
-            
-                <div class="formulario__grupo" id="grupo__termino">
-                    <div class="fila">
-                    <textarea
-                      name=""
-                      id=""
-                      cols="30"
-                      rows="10"
-                      placeholder="Tu Mensaje..."
-                      class="input-full"
-                    ></textarea>
-                    </div>
-                  
-            
-                  <!-- Grupo: Terminos y Condiciones -->
-                  <div class="formulario__grupo" id="grupo__terminos">
-                    <label class="formulario__label">
-                      <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
-                      Acepto los Terminos y Condiciones
-                    </label>
-                  </div>
-            
+               
                   <div class="formulario__mensaje" id="formulario__mensaje">
                     <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
                   </div>
             
                   <div class="formulario__grupo formulario__grupo-btn-enviar">
-                    <button type="submit" class="formulario__btn">Enviar</button>
+                    <button type="submit" class="formulario__btn" id="regist">Enviar</button>
                     <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
                   </div>
                 </form>
@@ -157,8 +137,8 @@
             
             
               
-            
-              <script src="js/validacion.js"></script>
+            <script src="parte1"></script>
+              <!-- <script src="js/validacion.js"></script> -->
               <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 
@@ -183,7 +163,7 @@
   </div>
 </footer>
 
-<script src="/js/script.js"></script>
+<script src="/js/validacion.js"></script>
             </div>
         </section>
     
