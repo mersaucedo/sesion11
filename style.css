@@ -8,3 +8,32 @@
 .tab--active {
     border-bottom: 1px solid blue;
 }
+
+.touched {
+    border: 1px solid gray;
+}
+
+.was-validated input:invalid {
+    border: 1px solid red;
+}
+
+.was-validated input:valid {
+    border: 1px solid green;
+}
+
+.was-validated select:invalid {
+    border: 1px solid red;
+}
+
+.was-validated select:valid {
+    border: 1px solid green;
+}
+
+.error {
+    font-size: 9px;
+    color: red;
+}
+
+.error.active {
+    padding: 4px
+}
