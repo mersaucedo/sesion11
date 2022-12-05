@@ -5,24 +5,32 @@
   font-family: sans-serif;
 }
 
+.container {
+  width: 100%;
+}
+
 .tabla {
-  margin: 30px;
-  border: 1px solid #22d;
-  padding: 10px;
+  margin: 30px auto;
+  border: 3px solid #222;
+  /* padding: 10px; */
 }
 
 .tabla__header th {
-  border: 1px solid #d22;
+  background-color: #04c6f75e;
   padding: 6px;
   cursor: pointer;
+  font-size: 1.4em;
 }
 .tabla__header span {
   font-size: 1.2em;
   color: #d22;
-  /* rotate: 90deg; */
   writing-mode: vertical-lr;
   display: inline-block;
   transition: rotate 0.6s;
+}
+
+td {
+  font-size: 1.2rem;
 }
 
 .rotar span {
@@ -30,10 +38,15 @@
 }
 
 .tabla__body td {
-  border: 1px solid #ee2;
+  background-color: #fffb0a5e;
   padding: 5px;
 }
 .parrafo {
   font-size: 32px;
   text-align: center;
+}
+
+.editperfil {
+  text-decoration: none;
+  color: #800f0f;
 }

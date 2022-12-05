@@ -31,7 +31,7 @@ function renderizarTabla() {
       <td>${emp.correo}</td>
       <td>${emp.sueldoBruto}</td>
       <td>${emp.sueldoNeto}</td>
-      <td><a href="/data.html?codigo=${emp.codigo}" target="_blank">🖊</a></td>
+      <td><a href="/data.html?codigo=${emp.codigo}" target="_blank" class="editperfil">🖊 Edit</a></td>
     </tr>
   `;
     })
