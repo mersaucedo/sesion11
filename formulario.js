@@ -1,11 +1,11 @@
 'use-strict'
 class Formulario {
     constructor (listEmployee) {
-        this.form = document.querySelector('.form-register')
-        this.inputName = document.querySelector('input[name="name"]')
-        this.inputLastname = document.querySelector('input[name="lastname"]')
-        this.inputEmail = document.querySelector('input[name="email"]')
-        this.selectCharge = document.querySelector('select[name="charge"]')
+        this.form = document.querySelector('.js-form-register')
+        this.inputName = document.querySelector('.js-form-register input[name="name"]')
+        this.inputLastname = document.querySelector('.js-form-register input[name="lastname"]')
+        this.inputEmail = document.querySelector('.js-form-register input[name="email"]')
+        this.selectCharge = document.querySelector('.js-form-register select[name="charge"]')
         this.listEmployee = listEmployee
     }
 
@@ -144,3 +144,25 @@ class ArrowOrder {
         this.loadEvents()
     }
 }
+
+class FormularioUpdate extends  Formulario {
+    constructor(listEmployee) {
+        super(listEmployee)
+        this.form = document.querySelector('.js-form-update')
+        this.inputName = document.querySelector('.js-form-update input[name="name"]')
+        this.inputLastname = document.querySelector('.js-form-update input[name="lastname"]')
+        this.inputEmail = document.querySelector('.js-form-update input[name="email"]')
+        this.selectCharge = document.querySelector('.js-form-update select[name="charge"]')
+    }
+
+    loadData() {
+        const code = Number(this.form.dataset.code)
+        console.log(this.form, 'kdddd', this.listEmployee.getItemDetail(300))
+        const employee = this.listEmployee.getItemDetail(code)
+        console.log(employee,'employee')
+        //this.inputName.value = employee.name
+    }
+    
+}
+
+

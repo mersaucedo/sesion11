@@ -112,8 +112,11 @@ class Tab {
 const listEmployee = new ListaEmpleado()
 const tab = new Tab(listEmployee)
 const form = new Formulario(listEmployee)
+const formUpdate = new FormularioUpdate(listEmployee)
 const arrowOrder = new ArrowOrder(listEmployee)
 
 form.init()
 tab.init()
 arrowOrder.init()
+formUpdate.init()
+formUpdate.loadData()

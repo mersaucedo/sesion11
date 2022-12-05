@@ -164,7 +164,7 @@
         </section>
         <section class="u-hide" data-tab="registrar" >
             <h2>REGISTRAR NUEVO EMPLEADO</h2>
-            <form class="form-register" novalidate>
+            <form class="form-register js-form-register" novalidate>
                 <div>
                     <label for="name">Nombre</label><br/>
                     <input
@@ -228,8 +228,9 @@
                         name="name"
                         minlength="2"
                         maxlength="14"
-                        placeholder="Nombre"
+                        placeholder="Nombre update"
                         required
+                        readonly
                     />
                     <span class="error"></span>
                 </div>
@@ -242,6 +243,7 @@
                         maxlength="14"
                         placeholder="Apellido"
                         required
+                        readonly
                     />
                     <span class="error"></span>
                 </div>
@@ -254,12 +256,13 @@
                         placeholder="Correo"
                         pattern="^\S+@\S+\.\S+$"
                         required
+                        disabled
                     />
                     <span class="error"></span>
                 </div>
                 <div>
                     <label for="charge">Cargo</label><br/>
-                    <select id="charge" name="charge" required>
+                    <select id="charge" name="charge" required disabled>
                         <option value="">Seleccione cargo...</option>
                         <option value="jefe">Jefe</option>
                         <option value="analista">Analista</option>
