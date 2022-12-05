@@ -7,7 +7,7 @@
   --color-fuxia: #d12eb9;
   --fondo-color: hsl(185, 75%, 39%);
   --text-color: hsl(227, 10%, 46%);
-  --color-borde: #8884;
+  --color-borde: #204FDB;
 }
 
 input {
@@ -58,7 +58,7 @@ p {
 
 .cabezera {
   display: flex;
-  background-image: url("img/header.jpg");
+  background-image: url("Img/usuario.jpg");
   width: 100%;
   height: 30%;
   border-bottom: 3px solid var(--color-fuxia);
@@ -144,8 +144,8 @@ footer {
   font-weight: 600;
 }
 #guardar:disabled {
-  background-color: wheat;
+  background-color: #c8b6ff;
 }
 #editar:disabled {
-  background-color: wheat;
+  background-color:  #c8b6ff;
 }
