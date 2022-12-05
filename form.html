@@ -1,172 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css" />
-    <link rel="stylesheet" href="/css/buttons.css" />
-    <link rel="stylesheet" href="validacion.css">
-    <title>Grupo de desarrollo Web</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navlist">
+        <li><a href="/form.html">Formulario de registro</a></li>
+        <li><a href="/tabla.html">Lista de empleados</a></li>
+      </ul>
+    </nav>
+    <div class="itemss"></div>
+    <div class="itemss"></div>
+    <div class="itemss"></div>
+    <div class="itemss"></div>
+    <div class="itemss"></div>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap"
-      rel="stylesheet"
-      />
-</head>
-<body>
-    <body>
-      <section id="inicio">
-        <div class="contenido">
-          <header>
-            <div class="contenido-header">
-              <h1><a href="index.html" onclick="seleccionar(this)">/JP/</a></h1>
-              <nav id="nav" class="">
-                <ul id="links">
-                      <li>
-                        <a href="data.html" onclick="seleccionar(this)">DATA EMPLEADO</a>
-                      </li>
-                      <li>
-                        <a href="table.html" onclick="seleccionar(this)">LISTA DE EMPLEADOS</a>
-                      </li>
-                      <li>
-                        <a href="form.html" class="seleccionado" onclick="seleccionar(this)"
-                          >FORMULARIO DE REGISTRO</a
-                        >
-                      </li>
-                </ul>
-              </nav>
-  
-              <!-- Icono del menu responsive -->
-              <div id="icono-nav" onclick="responsiveMenu()">
-                <i class="fa-solid fa-bars"></i>
-              </div>
-  
-              <div class="redes">
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-              </div>
-            </div>
-          </header>
+    <form class="form" autocomplete="off" id="form">
+      <h2 class="form__title">
+        Inicia Sesi<span class="span__title">ó</span>n
+      </h2>
+      <p class="form__parrafo">
+        Olvidaste tu Contraseña?
+        <span class="form__link" id="idclave">Listo</span>
+      </p>
 
+      <div class="form__container">
+        <div class="form__group">
+          <input
+            type="text"
+            id="nombre"
+            class="form__input"
+            placeholder=" "
+            required
+          />
+          <label for="nombre" class="form__label">Nombre:</label>
+          <span class="form__line"></span>
+        </div>
 
-                <!-- SECCTION C O N T A C T O -->
-             
+        <div class="form__group">
+          <input
+            type="text"
+            id="apellido"
+            class="form__input"
+            placeholder=" "
+          />
+          <label for="apellido" class="form__label">Apellido:</label>
+          <span class="form__line"></span>
+        </div>
 
-                <section id="contacto">
-                  <h3 class="titulo-seccion">FORMULARIO DE REGISTRO</h3>
-                  <div class="contenedor-form">
-                  
-            
-                <form action="" class="formulario" id="formulario">
-                  
-                  <!-- Grupo: Nombre -->
-                  <div class="formulario__grupo" id="grupo__nombre">
-                    <label for="nombre" class="formulario__label">Nombre</label>
-                    <div class="formulario__grupo-input">
-                      <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="MERCEDES YANET">
-                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">El nombre tiene que ser de mayor de 3 dígitos y solo puede contener letras y guion bajo.</p>
-                  </div>
-            
-                  <!-- Grupo: Apellido -->
-                  <div class="formulario__grupo" id="grupo__apellido">
-                    <label for="apellido" class="formulario__label">Apellido</label>
-                    <div class="formulario__grupo-input">
-                      <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="SAUCEDO SANTOS">
-                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">El apellido tiene que ser mayor de 3 dígitos y solo puede contener letras y guion bajo.</p>
-                  </div>
-            
-            
-            
-                  <!-- Grupo: Correo Electronico -->
-                  <div class="formulario__grupo" id="grupo__correo">
-                    <label for="correo" class="formulario__label">Correo Electrónico</label>
-                    <div class="formulario__grupo-input">
-                      <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
-                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
-                  </div>
-            
-                  <!-- Grupo: Teléfono -->
-                  <div class="formulario__grupo" id="grupo__telefono">
-                    <label for="telefono" class="formulario__label">Cargo</label>
-                    <div class="formulario__input">
-                      <select name="cargo" id="telefono">
-                        <option >selelcione</option>
-                        <option value="Jefe">Jefe</option>
-                        <option value="Analista">Analista</option>
-                        <option value="Programador">Programador</option>
-                        <option value="Soporte">Soporte</option>
-                        <option value="Asistente">Asistente</option>
-                      </select>
-                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">Cargo no disponible</p>
-                  </div>
-            
-               
-                  <div class="formulario__mensaje" id="formulario__mensaje">
-                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-                  </div>
-            
-                  <div class="formulario__grupo formulario__grupo-btn-enviar">
-                    <button type="submit" class="formulario__btn" id="regist">Enviar</button>
-                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-                  </div>
-                </form>
-                  </div>
-                          </section>
-              </main>
-            
-            
-            
-            
-              
-            <script src="parte1"></script>
-              <!-- <script src="js/validacion.js"></script> -->
-              <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <div class="form__group">
+          <input type="email" id="email" class="form__input" placeholder=" " />
+          <label for="email" class="form__label">Correo:</label>
+          <span class="form__line"></span>
+        </div>
 
+        <div class="form__group">
+          <select name="Cargos" id="cargo" class="form__select">
+            <option value="jefe">Jefe</option>
+            <option value="analista">Analista</option>
+            <option value="programador">Programador</option>
+            <option value="soporte">Soporte</option>
+            <option value="asistente">Asistente</option>
+          </select>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
- <!-- SECCION FOOTER -->
- <footer>
-  <p>Todos los derechos reservados - 2022</p>
-  <div class="redes">
-    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-    <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-  </div>
-</footer>
-
-<script src="/js/validacion.js"></script>
-            </div>
-        </section>
-    
-   
-</body>
+        <input id="button" type="submit" class="form__submit" value="Entrar" />
+      </div>
+    </form>
+    <script src="form.js"></script>
+  </body>
 </html>
