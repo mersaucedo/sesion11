@@ -78,16 +78,17 @@ class ArrowOrder {
     constructor (listEmployee) {
         this.listEmployee = listEmployee
         this.order = document.querySelectorAll('.js-order-action')
-        console.log(this.order, 'order')
+        this.viewDetail = 'js-view-detail'
+        this.actionsTab = document.querySelector('.tab')
+        this.actions = this.actionsTab.children
+        this.formUpdate = document.querySelector('.js-form-update')
     }
 
     handleClickOrder (e) {
         const element = e.currentTarget
-        console.log(element)
         const property = element.dataset.property
         const order = element.dataset.order
         const listOrdered = this.listEmployee.orderBy(property, order)
-        console.log(listOrdered, 'listOrdrer')
         let listElements = ''
         const section = document.getElementById('employees')
 
@@ -95,6 +96,20 @@ class ArrowOrder {
             listElements = listElements + this.templateItem(employee)
         })
         section.innerHTML = listElements
+        this.loadEventViewDetail()
+    }
+
+    handleClickViewDetail (e) {
+        const currentDetail = e.currentTarget
+        this.formUpdate.setAttribute('data-employee', currentDetail.dataset.code)
+        for (let i = 0; i < this.actions.length ; i++) {
+            const action = this.actions[i]
+            if (action.dataset.tab === 'filtrar') {
+                action.click()
+            }
+        }
+        //console.log(currentDetail,'currentDetauil')
+        //console.log(this.listEmployee.getItemDetail(Number(currentDetail.dataset.code)))
     }
 
     templateItem (employee) {
@@ -106,9 +121,16 @@ class ArrowOrder {
                 <div>${employee.email}</div>
                 <div>${employee.salaryBruto}</div>
                 <div>${employee.salaryNeto}</div>
-                <div style="text-decoration: underline;">detalle</div>
+                <div class="js-view-detail" style="text-decoration: underline; cursor: pointer;" data-code="${employee.code}">detalle</div>
             </div>
         `
+    }
+
+    loadEventViewDetail () {
+        const viewDetail = document.querySelectorAll(`.${this.viewDetail}`)
+        for (let i = 0; i < viewDetail.length ; i++) {
+            viewDetail[i].addEventListener('click', (e) => this.handleClickViewDetail(e), false)
+        }
     }
 
     loadEvents() {
@@ -121,5 +143,4 @@ class ArrowOrder {
     init() {
         this.loadEvents()
     }
-
 }

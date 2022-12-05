@@ -23,7 +23,6 @@ class Empleado {
             'soporte': 2000,
             'asistente': 1500,
         }
-        console.log(this.charge,'thischrage', sueldos)
         const salaryBase = sueldos[this.charge]
         return salaryBase
     }
@@ -131,4 +130,7 @@ class ListaEmpleado {
         }
     }
 
+    getItemDetail(code) {
+        return this.list.filter((item) => item.code === code)[0]
+    }
 }
