@@ -1,145 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo de desarrollo Web</title>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/members.css" />
-    <script
-    src="https://kit.fontawesome.com/9589b620b5.js"
-    crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/estilo.css" />
-</head>
-<body>
-    <section id="inicio">
-        <div class="contenido">
-          <header>
-            <div class="contenido-header">
-              <h1><a href="index.html" onclick="seleccionar(this)">/JP/</a></h1>
-              <nav id="nav" class="">
-                <ul id="links">
-                  <li>
-                    <a href="data.html" class="seleccionado" onclick="seleccionar(this)">DATA EMPLEADO</a>
-                  </li>
-                  <li>
-                    <a href="table.html" onclick="seleccionar(this)">LISTA DE EMPLEADOS</a>
-                  </li>
-                  <li>
-                    <a href="form.html" onclick="seleccionar(this)"
-                      >FORMULARIO DE REGISTRO</a
-                    >
-                  </li>
-                </ul>
-              </nav>
-              <!-- Icono del menu responsive -->
-              <div id="icono-nav" onclick="responsiveMenu()">
-                <i class="fa-solid fa-bars"></i>
-              </div>
-  
-              <div class="redes">
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-              </div>
-            </div>
-          </header>      
+    <link rel="stylesheet" href="data.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navlist">
+        <li><a href="/form.html">Formulario de registro</a></li>
+        <li><a href="/tabla.html">Lista de empleados</a></li>
+      </ul>
+    </nav>
+    <!-- <div class="tarjeta"> -->
+    <div class="container">
+      <div class="cabezera">
+        <div class="picture">
+          <img class="header__img" src="Img/perfil.jpg" alt="empleado" />
         </div>
-    </section>
-    <section id="servicios">
-      <h3 class="titulo-seccion">DATA EMPLEADO</h3>
-      <div class="fila">
-          <div class="servicio" style="background: repeat;">
-              <span class="icono"> <i class="fa-solid fa-code"></i></span>
-              <form action="" class="formulario" id="formulario">
-                
-                  <!-- Grupo: Nombre -->
-                  <div class="formulario__grupo" id="grupo__nombre">
-                    <label for="nombre" class="formulario__label">Nombre</label>
-                    <div class="formulario__grupo-input">
-                      <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="MERCEDES YANET">
-                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">El nombre tiene que ser de mayor de 3 dígitos y solo puede contener letras y guion bajo.</p>
-                  </div>
-            
-                  <!-- Grupo: Apellido -->
-                  <div class="formulario__grupo" id="grupo__apellido">
-                    <label for="apellido" class="formulario__label">Apellido</label>
-                    <div class="formulario__grupo-input">
-                      <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="SAUCEDO SANTOS">
-                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">El apellido tiene que ser mayor de 3 dígitos y solo puede contener letras y guion bajo.</p>
-                  </div>
-            
-            
-            
-                  <!-- Grupo: Correo Electronico -->
-                  <div class="formulario__grupo" id="grupo__correo">
-                    <label for="correo" class="formulario__label">Correo Electrónico</label>
-                    <div class="formulario__grupo-input">
-                      <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
-                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
-                  </div>
-            
-                  <!-- Grupo: Teléfono -->
-                  <div class="formulario__grupo" id="grupo__telefono">
-                    <label for="telefono" class="formulario__label">Cargo</label>
-                    <div class="formulario__input">
-                      <select name="cargo" id="telefono">
-                        <option >selelcione</option>
-                        <option value="Jefe">Jefe</option>
-                        <option value="Analista">Analista</option>
-                        <option value="Programador">Programador</option>
-                        <option value="Soporte">Soporte</option>
-                        <option value="Asistente">Asistente</option>
-                      </select>
-                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulario__input-error">Cargo no disponible</p>
-                  </div>
-            
-               
-                  <div class="formulario__mensaje" id="formulario__mensaje">
-                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-                  </div>
-            
-                  <div class="fila" style="display: flex;">
-                    <div class="formulario__grupo formulario__grupo-btn-enviar">
-                        <button type="submit" class="formulario__btn" id="regist">Editar</button>
-                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-                      </div>
-                    <div class="formulario__grupo formulario__grupo-btn-enviar">
-                      <button type="submit" class="formulario__btn" id="regist">Guardar</button>
-                      <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-                    </div>
-                </div>
-                </form>
-          </div>
       </div>
-    </section>
-     <!-- SECCION FOOTER -->
-     <footer>
-        <p>Todos los derechos reservados - 2022</p>
-        <div class="redes">
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+      <div class="main">
+        <div class="titulo">
+          <input type="text" value="Nombre" id="nombre" disabled />
+          <input type="text" value="Apellido" id="apellido" disabled />
+          <input type="text" value="Correo" id="correo" disabled />
+          <select name="Cargos" id="cargo" disabled>
+            <option value="jefe">Jefe</option>
+            <option value="analista">Analista</option>
+            <option value="programador">Programador</option>
+            <option value="soporte">Soporte</option>
+            <option value="asistente">Asistente</option>
+          </select>
+        </div>
+        <p class="texto">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          provident minus qui quibusdam, quaerat molestiae animi, harum id ad
+          porro nam autem! ada a hoiq fg jq hoaib jbajhaiuhdouiqghoh hqioh cab
+          joiho oaihqhuhg hahuhai hiha hih hi h ihaiha
+        </p>
+
+        <div class="button__container">
+          <button class="button" id="editar">Editar</button>
+          <button class="button" id="guardar" disabled>Guardar</button>
+        </div>
+      </div>
+      <footer>
+        <div class="foot">
+          <p class="foo__text">Sueldo Bruto</p>
+          <p class="foo__number">1.042</p>
+        </div>
+        <div class="foot">
+          <p class="foo__text">Sueldo Neto</p>
+          <p class="foo__number">34.205</p>
+        </div>
+        <div class="foot">
+          <p class="foo__text">Estado</p>
+          <p class="foo__number">1.308</p>
         </div>
       </footer>
-
-      <script src="js/script.js"></script>
-  
-</body>
+    </div>
+    <script src="./data.js" type="module"></script>
+  </body>
 </html>

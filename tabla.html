@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tablas.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navlist">
+        <li><a href="/form.html">Formulario de registro</a></li>
+        <li><a href="/tabla.html">Lista de empleados</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <table class="tabla" id="tablita">
+        <thead>
+          <tr class="tabla__header">
+            <th id="codigo" class="rotar">Codigo <span>></span></th>
+            <th id="nombre" class="rotar">Nombre <span>></span></th>
+            <th id="apellido" class="rotar">Apellido <span>></span></th>
+            <th id="correo" class="rotar">Correo <span>></span></th>
+            <th id="sueldoBruto" class="rotar">Sueldo bruto <span>></span></th>
+            <th id="sueldoNeto" class="rotar">Sueldo Neto <span>></span></th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <td colspan="6">Sin datos</td>
+            <a href="/data.html"></a>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="tabla.js"></script>
+  </body>
+</html>
