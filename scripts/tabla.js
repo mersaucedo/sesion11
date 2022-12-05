@@ -1,11 +1,7 @@
 const container = document.querySelector(".container");
-
-///body---------
 let empleados = localStorage.getItem("bd")
   ? JSON.parse(localStorage.getItem("bd"))
   : [];
-
-//crecion de la td
 
 const tablaEmpleados = document.getElementById("tablita");
 
@@ -38,7 +34,7 @@ function renderizarTabla() {
     .join("");
 }
 renderizarTabla();
-//header------
+
 function ordenarPorColumna(columna = "", clase = "") {
   if (clase == "rotar") {
     switch (columna) {
@@ -83,5 +79,3 @@ ths.forEach((th) => {
     renderizarTabla();
   });
 });
-
-//------------
