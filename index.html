@@ -10,15 +10,159 @@
 <body>
     <h1>Empleados</h1>
     <ul class="tab">
-        <li data-tab="lista">LISTAR</li>
-        <li data-tab="registro" class="tab--active">REGISTRAR</li>
-        <li data-tab="data">DATA</li>
+        <li data-tab="listar">LISTAR</li>
+        <li data-tab="registrar" class="tab--active">REGISTRAR</li>
+        <li data-tab="filtrar">DATA</li>
     </ul>
     <div class="tab-section">
-        <section class="" data-tab="lista">
+        <section class="" data-tab="listar" id="listEmployee">
             <h2>LISTA DE EMPLEADOS</h2>
+            <div class="" style="display: grid; grid-auto-flow: column; max-width: 900px;">
+                <div  style="display: flex; align-items: center;">
+                    <p>codigo</p>
+                    <span >
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(-90deg); display: block;"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="code"
+                            data-order="asc">
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(90deg);"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="code"
+                            data-order="desc">
+                    </span>
+                </div>
+                <div  style="display: flex; align-items: center;">
+                    <p data-head="code">nombre</p>
+                    <span >
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(-90deg); display: block;"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="name"
+                            data-order="asc">
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(90deg);"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="name"
+                            data-order="desc">
+                    </span>
+                </div>
+                <div  style="display: flex; align-items: center;" class="js-order">
+                    <p data-head="code">apellido</p>
+                    <span >
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(-90deg); display: block;"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="lastname"
+                            data-order="asc">
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(90deg);"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="lastname"
+                            data-order="desc">
+                    </span>
+                </div>
+                <div  style="display: flex; align-items: center;" class="js-order">
+                    <p data-head="code">correo</p>
+                    <span >
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(-90deg); display: block;"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="email"
+                            data-order="asc">
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(90deg);"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="email"
+                            data-order="desc">
+                    </span>
+                </div>
+                <div  style="display: flex; align-items: center;" class="js-order">
+                    <p data-head="code">sueldo bruto</p>
+                    <span >
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(-90deg); display: block;"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="salaryBruto"
+                            data-order="asc">
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(90deg);"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="salaryBruto"
+                            data-order="desc">
+                    </span>
+                </div>
+                <div  style="display: flex; align-items: center;" class="js-order">
+                    <p data-head="code">sueldo neto</p>
+                    <span >
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(-90deg); display: block;"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="salaryNeto"
+                            data-order="asc">
+                        <img
+                            class="js-order-action"
+                            style="transform: rotate(90deg);"
+                            src="icon_arrow.svg"
+                            alt=""
+                            height="8"
+                            width="8"
+                            data-property="salaryNeto"
+                            data-order="desc">
+                    </span>
+                </div>
+                <div>detalle</div>
+            </div>
+            <div id="employees">
+                No hay datos que mostrar
+            </div>
         </section>
-        <section class="u-hide" data-tab="registro">
+        <section class="u-hide" data-tab="registrar" >
             <h2>REGISTRAR NUEVO EMPLEADO</h2>
             <form class="form-register" novalidate>
                 <div>
@@ -73,12 +217,12 @@
                 <div><button type="submit">Crear</button></div>
             </form>
         </section>
-        <section class="u-hide" data-tab="data">
+        <section class="u-hide" data-tab="filtrar">
             DATA EMPLEADO
         </section>
     </div>
+    <script src="formulario.js"></script>
     <script src="clases.js"></script>
     <script src="main.js"></script>
-    <script src="formulario.js"></script>
 </body>
 </html>

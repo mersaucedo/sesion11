@@ -1,11 +1,12 @@
 'use-strict'
 class Formulario {
-    constructor () {
+    constructor (listEmployee) {
         this.form = document.querySelector('.form-register')
         this.inputName = document.querySelector('input[name="name"]')
         this.inputLastname = document.querySelector('input[name="lastname"]')
         this.inputEmail = document.querySelector('input[name="email"]')
         this.selectCharge = document.querySelector('select[name="charge"]')
+        this.listEmployee = listEmployee
     }
 
 
@@ -48,6 +49,15 @@ class Formulario {
             this.showError(this.inputLastname)
             this.showError(this.inputEmail)
             this.showError(this.selectCharge)
+        } else {
+            const employee = new Empleado({
+                name: this.inputName.value,
+                lastname: this.inputLastname.value,
+                email: this.inputEmail.value,
+                charge: this.selectCharge.value
+            })
+            listEmployee.addNew(employee)
+            console.log(listEmployee.list)
         }
     }
 
@@ -64,71 +74,52 @@ class Formulario {
     }
 }
 
-const form = new Formulario()
-
-form.init()
-
-/*(function() {
-    'use strict'
-
-    const form = document.querySelector('.form-register')
-    const inputName = document.querySelector('input[name="name"]')
-    const inputLastname = document.querySelector('input[name="lastname"]')
-    const inputEmail = document.querySelector('input[name="email"]')
-    const selectCharge = document.querySelector('select[name="charge"]')
-    
-
-    init()
-
-    function init() {
-        form.addEventListener('submit', handleSubmit, false)
-
-        validateToInput(inputName)
-        validateToInput(inputLastname)
-        validateToInput(inputEmail)
-        validateToInput(selectCharge)
+class ArrowOrder {
+    constructor (listEmployee) {
+        this.listEmployee = listEmployee
+        this.order = document.querySelectorAll('.js-order-action')
+        console.log(this.order, 'order')
     }
 
-    function validateToInput(inputElement) {
-        inputElement.addEventListener('input', () => {
-            if (inputElement.validity.valid) {
-                const error = inputElement.nextElementSibling
-                error.innerText = ''
-                error.className = 'error'
-            } else {
-                showError(inputElement)
-            }
+    handleClickOrder (e) {
+        const element = e.currentTarget
+        console.log(element)
+        const property = element.dataset.property
+        const order = element.dataset.order
+        const listOrdered = this.listEmployee.orderBy(property, order)
+        console.log(listOrdered, 'listOrdrer')
+        let listElements = ''
+        const section = document.getElementById('employees')
+
+        listOrdered.forEach((employee) => {
+            listElements = listElements + this.templateItem(employee)
         })
+        section.innerHTML = listElements
     }
 
-    function showError(inputElement) {
-        const error = inputElement.nextElementSibling
-        const label = inputElement.previousElementSibling
-        if (inputElement.validity.valueMissing) {
-            error.textContent = `El campo ${label.innerText} es requerido`;
-        } else if (inputElement.validity.tooShort) {
-            error.textContent = `E-mail should be at least ${inputName.minLength} characters; you entered ${inputElement.value.length}.`;
-        } else if (inputElement.validity.patternMismatch && inputElement.type==="email") {
-            error.textContent = `Intente con un formato: example@gmail.com`;
-        }
-        error.className = "error active";
+    templateItem (employee) {
+        return `
+            <div style="display: grid; grid-auto-flow: column; max-width: 900px;" >
+                <div>${employee.code}</div>
+                <div>${employee.name}</div>
+                <div>${employee.lastname}</div>
+                <div>${employee.email}</div>
+                <div>${employee.salaryBruto}</div>
+                <div>${employee.salaryNeto}</div>
+                <div style="text-decoration: underline;">detalle</div>
+            </div>
+        `
     }
 
-    function handleSubmit (event) {
-        form.classList.add('was-validated')
-        event.preventDefault()
-        if (
-            !inputName.validity.valid ||
-            !inputLastname.validity.valid ||
-            !inputEmail.validity.valid ||
-            !selectCharge.validity.valid
-        ) {
-            event.stopPropagation()
-            showError(inputName)
-            showError(inputLastname)
-            showError(inputEmail)
-            showError(selectCharge)
+    loadEvents() {
+        for (let i = 0; i < this.order.length ; i++) {
+            const orderAction = this.order[i]
+            orderAction.addEventListener('click', (e) => this.handleClickOrder(e), false)
         }
     }
 
-})()*/
+    init() {
+        this.loadEvents()
+    }
+
+}
