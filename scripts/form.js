@@ -56,7 +56,7 @@ let errores = [];
 nombre.addEventListener("input", (e) => {
   e.preventDefault();
   let dataNombre = nombre.value;
-  const expReg = /^[A-Za-z\d$@$!%*?&]{2,14}$/;
+  const expReg = /^[a-zA-ZÀ-ÿ\s]{3,14}$/;
   let nombreOk = expReg.test(dataNombre);
 
   if (nombreOk) {
@@ -72,7 +72,7 @@ nombre.addEventListener("input", (e) => {
 apellido.addEventListener("input", (e) => {
   e.preventDefault();
   let dataApellido = apellido.value;
-  const expReg = /^[A-Za-z\d$@$!%*?&]{3,14}$/;
+  const expReg = /^[a-zA-ZÀ-ÿ\s]{3,14}$/;
   let apellidoOk = expReg.test(dataApellido);
 
   if (apellidoOk) {
